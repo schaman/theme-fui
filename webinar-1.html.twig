@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Вебинар</title>
+    <title>{{ title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Loading Bootstrap -->
@@ -31,17 +31,14 @@
   <body>
     <section>
       <div class="container">
-        <h1>Вебинар «ПроЛюбовь»</h1>
+        <h1>
+          {{ title }}
+        </h1>
         <div class="row">
           <div class="col-xs-6 col-sm-7 col-md-8">
-            <p class="lead">30 октября в 20:00 мск</p>
+            <p class="lead">{{ date }}</p>
             <hr/>
-            <h4>Всё, чтобы ты был счастлив в отношениях:</h4>
-            <ul>
-              <li>Как создать доверие?</li>
-              <li>Что делать, если стало скучно в отношениях?</li>
-              <li>Как бороться с обыденностью?</li>
-            </ul>
+            {{ text | markdown }}
             <hr/>
             <!--p>
               <button type="submit" class="btn btn-inverse btn-lg">Узнать больше</button>
